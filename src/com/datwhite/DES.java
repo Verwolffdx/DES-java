@@ -230,7 +230,6 @@ public class DES {
         return out;
     }
 
-
     private static byte[] deletePadding(byte[] input) {
         int count = 0;
 
@@ -244,8 +243,6 @@ public class DES {
         System.arraycopy(input, 0, tmp, 0, tmp.length);
         return tmp;
     }
-
-
 
     private static byte[][] generateSubKeys(byte[] key) {
         byte[][] tmp = new byte[16][];
