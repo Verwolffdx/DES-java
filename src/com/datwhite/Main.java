@@ -1,23 +1,12 @@
 package com.datwhite;
 
-import javax.swing.text.Segment;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.Base64;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Main {
 
-//    private static final Charset UTF8_CHARSET = Charset.forName("UTF-8");
-
-    /**
-     * @param args
-     */
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Введите текст: ");
@@ -25,9 +14,7 @@ public class Main {
 
             //DES
             System.out.print("Введите ключ: ");
-            String k = scanner.nextLine();//5qw8sd4h
-//            String text = "йцуQWE";
-//            String k = "DESkey56";
+            String k = scanner.nextLine();
 //            GenerateKey keyGen = new GenerateKey(8);
 //            k = keyGen.generate();
             System.out.println("KEY " + k);
@@ -44,7 +31,7 @@ public class Main {
             System.out.println("Расшифрованный текст (ECB): " + strDec);
             System.out.println("-------------------");
 
-        } catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

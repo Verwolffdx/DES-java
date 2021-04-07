@@ -1,7 +1,5 @@
 package com.datwhite;
 
-import java.util.Random;
-
 public class DES {
     // initial permuation table
     private static int[] IP = { 58, 50, 42, 34, 26, 18, 10, 2, 60, 52, 44, 36,
@@ -161,10 +159,12 @@ public class DES {
 
         for (int i = 0; i < 16; i++) {
             byte[] tmpR = R;
-            if(isDecrypt)
-                R = f_func(R, subkeys[15-i]);
-            else
-                R = f_func(R,subkeys[i]);
+            if(isDecrypt) {
+                R = f_func(R, subkeys[15 - i]);
+            }
+            else {
+                R = f_func(R, subkeys[i]);
+            }
             R = xor_func(L, R);
             L = tmpR;
         }
